@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XML declaration: Uses XML version 1.0 and UTF-8 character encoding -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- Root element of a Maven project -->
+    <!-- xmlns specifies the Maven POM namespace -->
+    <!-- xsi:schemaLocation tells Maven where to find the XML schema -->
+
+    <modelVersion>4.0.0</modelVersion>
+    <!-- Defines the version of the Maven Project Object Model -->
+
+    <parent>
+        <!-- Parent project that provides default configurations -->
+
+        <groupId>org.springframework.boot</groupId>
+        <!-- Organization that provides the parent project -->
+
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <!-- Spring Boot parent POM containing dependency and plugin management -->
+
+        <version>3.5.3</version>
+        <!-- Version of Spring Boot being used -->
+
+        <relativePath/>
+        <!-- Tells Maven to download the parent from the repository instead of searching locally -->
+    </parent>
+
+    <groupId>com.example</groupId>
+    <!-- Unique identifier for your project/organization -->
+
+    <artifactId>demo</artifactId>
+    <!-- Name of the project -->
+
+    <version>0.0.1-SNAPSHOT</version>
+    <!-- Current project version (SNAPSHOT means development version) -->
+
+    <name>demo</name>
+    <!-- Human-readable project name -->
+
+    <description/>
+    <!-- Optional project description -->
+
+    <url/>
+    <!-- Optional project website URL -->
+
+    <licenses>
+        <license/>
+    </licenses>
+    <!-- Optional license information -->
+
+    <developers>
+        <developer/>
+    </developers>
+    <!-- Optional developer information -->
+
+    <scm>
+        <connection/>
+        <developerConnection/>
+        <tag/>
+        <url/>
+    </scm>
+    <!-- Optional Source Control Management information -->
+
+    <properties>
+        <!-- Stores project-wide properties -->
+
+        <java.version>21</java.version>
+        <!-- Specifies that the project will use Java 21 -->
+    </properties>
+
+    <dependencies>
+        <!-- List of external libraries required by the project -->
+
+        <!-- ================= Spring Boot Web ================= -->
+
+        <dependency>
+            <!-- Beginning of Spring Web dependency -->
+
+            <groupId>org.springframework.boot</groupId>
+            <!-- Organization providing the dependency -->
+
+            <artifactId>spring-boot-starter-web</artifactId>
+            <!-- Includes Spring MVC, REST support, embedded Tomcat, and JSON support -->
+        </dependency>
+
+        <!-- ================= Spring Data JPA ================= -->
+
+        <dependency>
+            <!-- Dependency for database access using JPA and Hibernate -->
+
+            <groupId>org.springframework.boot</groupId>
+            <!-- Spring Boot dependency provider -->
+
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <!-- Provides JPA repositories, Hibernate ORM, and transaction support -->
+        </dependency>
+
+        <!-- ================= Swagger / OpenAPI ================= -->
+
+        <dependency>
+            <!-- Dependency for automatic API documentation -->
+
+            <groupId>org.springdoc</groupId>
+            <!-- Organization providing SpringDoc -->
+
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <!-- Generates OpenAPI documentation and Swagger UI -->
+
+            <version>2.8.9</version>
+            <!-- Version of SpringDoc being used -->
+        </dependency>
+
+        <!-- ================= Validation ================= -->
+
+        <dependency>
+            <!-- Provides Bean Validation support -->
+
+            <groupId>org.springframework.boot</groupId>
+            <!-- Spring Boot dependency provider -->
+
+            <artifactId>spring-boot-starter-validation</artifactId>
+            <!-- Enables annotations like @NotNull, @Email, @Size, @Min, etc. -->
+        </dependency>
+
+        <!-- ================= H2 Database ================= -->
+
+        <dependency>
+            <!-- In-memory database dependency -->
+
+            <groupId>com.h2database</groupId>
+            <!-- H2 database provider -->
+
+            <artifactId>h2</artifactId>
+            <!-- H2 database library -->
+
+            <scope>runtime</scope>
+            <!-- Loaded only when the application runs, not during compilation -->
+        </dependency>
+
+        <!-- ================= Testing ================= -->
+
+        <dependency>
+            <!-- Dependency used for writing unit and integration tests -->
+
+            <groupId>org.springframework.boot</groupId>
+            <!-- Spring Boot testing libraries -->
+
+            <artifactId>spring-boot-starter-test</artifactId>
+            <!-- Includes JUnit, Mockito, AssertJ, Spring Test, etc. -->
+
+            <scope>test</scope>
+            <!-- Available only while running test cases -->
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <!-- Build configuration section -->
+
+        <plugins>
+            <!-- List of Maven plugins used during build -->
+
+            <plugin>
+                <!-- Spring Boot Maven Plugin -->
+
+                <groupId>org.springframework.boot</groupId>
+                <!-- Plugin provider -->
+
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <!-- Allows commands like mvn spring-boot:run and creates executable JAR files -->
+            </plugin>
+
+        </plugins>
+
+    </build>
+
+</project>
+<!-- End of Maven project configuration -->
