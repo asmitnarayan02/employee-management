@@ -31,3 +31,30 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Logs and runtime files
+*.log
+logs/
+hs_err_pid*
+
+# Database files (H2, Derby, sqlite)
+*.mv.db
+*.trace.db
+*.db
+
+# Environment / local config
+.env
+env/
+
+# Generated files
+*.class
+*.jar
+*.war
+*.ear
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
